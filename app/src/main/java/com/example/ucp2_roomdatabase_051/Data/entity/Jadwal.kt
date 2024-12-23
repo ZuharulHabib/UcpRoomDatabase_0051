@@ -1,14 +1,15 @@
-package com.example.ucp2_roomdatabase_051.Data.entity
+package com.example.ucp2_roomdatabase_051.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "jadwal")
 data class Jadwal(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @PrimaryKey(autoGenerate = true)
+    val idJdl: Int = 0,
     val namaDokter: String,
     val namaPasien: String,
     val noHp: String,
-    val tanggalKonsultasi: String,
+    val tanggalKonsul: String,
     val status: String
 )
