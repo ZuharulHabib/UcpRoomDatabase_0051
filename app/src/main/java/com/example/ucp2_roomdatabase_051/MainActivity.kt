@@ -11,17 +11,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.ucp2_roomdatabase_051.ui.navigation.PengelolaHalaman
 import com.example.ucp2_roomdatabase_051.ui.theme.UCP2_RoomDatabase_051Theme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            UCP2_RoomDatabase_051Theme {
+            UCP2_RoomDatabase_051Theme() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    PengelolaHalaman(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -41,7 +42,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    UCP2_RoomDatabase_051Theme {
+    UCP2_RoomDatabase_051Theme() {
         Greeting("Android")
     }
 }
