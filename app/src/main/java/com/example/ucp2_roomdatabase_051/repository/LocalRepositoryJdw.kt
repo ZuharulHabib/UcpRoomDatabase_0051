@@ -24,7 +24,7 @@ class LocalRepositoryJdw(
         jadwalDao.deleteJd(jadwal)
     }
 
-    override suspend fun updateJdw(jawal: Jadwal) {
-        jadwalDao.updateJd(jawal)
+    override suspend fun updateJdw(jadwal: Jadwal) {
+        jadwalDao.updateJd(jadwal)
     }
 }
