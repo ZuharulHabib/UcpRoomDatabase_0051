@@ -8,8 +8,17 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface DokterDao {
+
+
+    // get all data
+    @Query("SELECT * FROM Dokter")
+    fun getAllDokter(): Flow<List<Dokter>>
+
+    // get dokter
+    @Query("SELECT * FROM dokter WHERE idDr = :idDr")
+    fun getDokter(idDr: String): Flow<Dokter>
+
+    // create dokter
     @Insert
     suspend fun insertDokter(dokter: Dokter)
-    @Query("SELECT * FROM dokter ORDER BY nama ASC")
-    fun getAllDokter(): Flow<List<Dokter>>
 }
